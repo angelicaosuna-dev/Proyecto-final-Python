@@ -1,5 +1,12 @@
 import re
-
+TEMPERATURA=1
+PESO=2
+MONEDA=3
+HISTORIAL=4
+BUSCAR=5
+SALIR=6
+#CONVERCIONES DE MONEDA
+DOLAR_A_EURO=0.88
 # -------------------------------------------------------------
 # CLASE PRINCIPAL DEL PROGRAMA
 # -------------------------------------------------------------
@@ -110,11 +117,11 @@ while seguir == 'si':
         # -------------------------------------------------------------
         # 3️⃣ CONVERSIONES DE MONEDA
         # -------------------------------------------------------------
-        elif opcion == 3:
+        elif opcion == MONEDA:
             print("\n💸 ¡Hora de hablar de dinero! 💵💶💴")
             print("1️⃣ Dólares 🇺🇸 ➡️ Pesos MXN 🇲🇽")
             print("2️⃣ Pesos MXN 🇲🇽 ➡️ Dólares 🇺🇸")
-            print("3️⃣ Dólares 🇺🇸 ➡️ Euros 🇪🇺 (Tasa fija: USD * 0.87)")
+            print(f"3️⃣ Dólares 🇺🇸 ➡️ Euros 🇪🇺 (Tasa fija: USD * {DOLAR_A_EURO})")
             print("4️⃣ Euros 🇪🇺 ➡️ Dólares 🇺🇸 (Tasa fija: 1.15)")
             print("5️⃣ Euros 🇪🇺 ➡️ Pesos MXN 🇲🇽 (Tasa fija: 21.5)")
             print("6️⃣ Pesos MXN 🇲🇽 ➡️ Euros 🇪🇺 (Tasa fija: 21.5)")
@@ -129,7 +136,7 @@ while seguir == 'si':
                 resultado = valor / app.tasas["dolar_mxn"]
                 mensaje = f"${valor:.2f} MXN = ${resultado:.2f} USD"
             elif subopcion == 3:
-                resultado = valor * 0.87
+                resultado = valor * DOLAR_A_EURO
                 mensaje = f"${valor:.2f} USD = €{resultado:.2f} EUR"
             elif subopcion == 4:
                 resultado = valor * app.tasas["euro_usd"]
