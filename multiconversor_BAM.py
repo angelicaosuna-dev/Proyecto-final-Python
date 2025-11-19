@@ -184,7 +184,7 @@ while seguir == 'si':
             resultados = app.buscar_conversion(termino) # app es la instancia de Conversor
             if resultados:
                 print("\n🎯 Coincidencias encontradas:")
-                for r in resultados:
+                for r in resultados:  # Mostrar cada resultado
                     print("•", r)
             else:
                 print("😅 No se encontraron coincidencias.")
