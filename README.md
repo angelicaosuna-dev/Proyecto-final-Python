@@ -87,8 +87,10 @@ Manejo de errores
   
   -except Exception as e:
 
+
+
 Gracias por usar el Multiconversor BAM!!!   
 
 
-Controla errores usando try-except.
+
 
