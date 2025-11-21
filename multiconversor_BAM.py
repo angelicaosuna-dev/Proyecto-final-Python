@@ -35,11 +35,11 @@ class Conversor:    # Clase para el conversor multifuncional
         return f"\n💥💣 ¡Bienvenid@s al {self.nombre}! 💥💣\n✨ Tu compa digital que convierte TODO con estilo ✨"
 
     def agregar_conversion(self, descripcion):
-        self.historial.append(descripcion)
+        self.historial.append(descripcion) # el .append agrega un elemento a la lista
 
     def buscar_conversion(self, termino):    
         """Filtra el historial de conversiones usando búsqueda parcial."""
-        return [c for c in self.historial if termino.lower() in c.lower()]  
+        return [c for c in self.historial if termino.lower() in c.lower()]  #Esto devuelve una lista con las coincidencias, aunque lo escribas en mayúsculas o minúsculas
 
 
 # -------------------------------------------------------------
